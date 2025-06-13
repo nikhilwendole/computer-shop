@@ -3,208 +3,1086 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMPUTER SHOP</title>
+    <title>COMPUTER TOWN</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<link rel="stylesheet" href="b.css">
 </head>
 <body>
-    <!-- //navbar// -->
+    
    
       <!-- Navbar End -->
 
 
-      
-  <header>
-    <div class="logo">Computer Shop</div>
-    <nav>
-      <ul>
-        <li>HOME</li>
-        <li>BRANDS </li>
-        <li>CONTACTS</li>
-        <li>PRODUCTS</li>
-        <li>SERVICES</li>
-      </ul>
-    </nav>
-    <button class="signin-btn">Sign In</button>
-  </header>
-<!-- 
-  <section class="hero">
-    <h1>Premium Laptops, Best Deals</h1>
-    <p>Explore top models from HP, Dell, and Lenovo</p>
-    <div class="search-bar">
-      <input type="text" placeholder="Search laptops...">
-    </div>
-  </section> -->
+    
+
+    <style>
+        /* Custom CSS to apply Poppins font globally */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #6dadc0; /* Light grey background for the page */
+        }
+
+        /* Header / Navbar Styling */
+        header {
+            background-color: #5bacb8a8; /* Darker blue-grey for a modern look */
+            color: #365d67; /* Light text color */
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #3498db; /* A vibrant blue for the logo */
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #5dade2; /* Lighter blue on hover */
+        }
+
+        nav .navbar-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem; /* Space between nav items */
+        }
+
+        .nav-item {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            position: relative; /* For underline animation */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px; /* Thicker underline */
+            bottom: -5px;
+            left: 0;
+            background-color: #3498db; /* Vibrant blue underline */
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-item:hover {
+            color: #3498db; /* Change text color on hover */
+        }
+
+        .nav-item:hover::after {
+            width: 100%; /* Expand underline on hover */
+        }
+
+        .contact-us { /* Specific style for contact us to differentiate */
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #3498db;
+            border-radius: 9999px; /* Fully rounded */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        .contact-us:hover {
+            background-color: #3498db;
+            color: #2c3e50; /* Dark text on hover */
+            border-color: #3498db;
+        }
+
+        .signin-btn {
+            background-color: #28a745; /* Green sign-in button */
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3); /* Subtle shadow */
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .signin-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); /* Deeper shadow on hover */
+        }
+
+        /* Basic Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 1rem;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            nav .navbar-menu {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                width: 100%;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+            }
+
+            .nav-item {
+                font-size: 1rem;
+                padding: 0.75rem 0;
+            }
+
+            .nav-item::after {
+                bottom: -3px; /* Adjust underline position for smaller screens */
+            }
+
+            .contact-us {
+                margin-top: 0.5rem; /* Space after other links */
+                width: calc(100% - 2rem); /* Full width minus padding */
+                display: block; /* Make it a block to take full width */
+            }
+
+            .signin-btn {
+                margin-top: 1rem;
+                width: calc(100% - 2rem); /* Full width minus padding */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Computer Town</div>
+        <nav>
+          
+            <ul class="navbar-menu">
+                <li><a href="#" class="nav-item">HOME</a></li>
+                <li><a href="#about" class="nav-item">ABOUT US</a></li>
+                <li><a href="#services" class="nav-item">SERVICES</a></li>
+                <li><a href="#products" class="nav-item">PRODUCTS</a></li>
+                <li><a href="#contact-us" class="contact-us">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <button class="signin-btn">Sign In</button>
+    </header>
+
+    
+
+   
 
 
  <!-- hero section> -->
 
+
+
      
- <section class="hero">
-    <img src="assests/1.jpg" alt="Computer Shop" class="hero-img">
+ <!-- <section class="hero">
+   
     <div class="hero-content">
         <h1>Welcome to Computer Town</h1>
         <p>Your one-stop shop for refurbished laptops & expert repairs.</p>
         <a href="#services" class="btn">Explore Services</a>
     </div>
-</section>
+</section> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Refurbished Laptop Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head> -->
+<body>
+  <section class="hero">
+    <div class="overlay">
+      <h1>Refurbished Laptop Center</h1>
+      <p>Best Deals on Dell, HP, Lenovo & More</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  
+
 
 <!-- End hero section -->
 
 
+
+<section id="products" class="product-details">
 <!-- services -->
-<section class="products" id="products">
-    <h2>Our Products</h2>
-    <div class="product-container">
-        <div class="product-card">
-            <img src="assests/2.avif" alt="Laptop 1">
-            <h3>HP EliteBook 840</h3>
-            <p>₹28,999</p>
-            <a href="#" class="btn">View Details</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Laptop Gallery</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for modal animation */
+        @keyframes scale-in {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animate-scale-in {
+            animation: scale-in 0.3s ease-out forwards;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen text-gray-800">
+    <div id="app" class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <!-- Header Section -->
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+              SOME LAPTOPS ARE HERE!  
+            </h1>
+            <p class="text-xl text-gray-600">
+                
+            </p>
         </div>
 
-        <div class="product-card">
-            <img src="assests/2.avif" alt="Laptop 2">
-            <h3>Dell Latitude 7490</h3>
-            <p>₹31,499</p>
-            <a href="#" class="btn">View Details</a>
+        <!-- Brand Filtering Section -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="brand-filter-btn px-6 py-3 rounded-full text-lg font-semibold bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105" data-brand="All">
+                All Laptops
+            </button>
+            <button class="brand-filter-btn px-6 py-3 rounded-full text-lg font-semibold bg-white text-indigo-700 border-2 border-indigo-600 shadow-md hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105" data-brand="HP">
+                HP
+            </button>
+            <button class="brand-filter-btn px-6 py-3 rounded-full text-lg font-semibold bg-white text-indigo-700 border-2 border-indigo-600 shadow-md hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105" data-brand="Dell">
+                Dell
+            </button>
+            <button class="brand-filter-btn px-6 py-3 rounded-full text-lg font-semibold bg-white text-indigo-700 border-2 border-indigo-600 shadow-md hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105" data-brand="Lenovo">
+                Lenovo
+            </button>
         </div>
 
-        <div class="product-card">
-            <img src="assests/2.avif" alt="Accessories">
-            <h3>Wireless Mouse</h3>
-            <p>₹599</p>
-            <a href="#" class="btn">View Details</a>
+        <!-- Laptop Cards Grid -->
+        <div id="laptop-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Laptop cards will be injected here by JavaScript -->
         </div>
 
-        <div class="product-card">
-            <img src="assests/2.avif" alt="Keyboard">
-            <h3>Mechanical Keyboard</h3>
-            <p>₹1,299</p>
-            <a href="#" class="btn">View Details</a>
+        <!-- Laptop Detail Modal -->
+        <div id="laptop-detail-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden">
+            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 animate-scale-in">
+                <!-- Modal Header -->
+                <div class="relative p-6 border-b border-gray-200 flex justify-between items-center">
+                    <h3 id="modal-laptop-name-header" class="text-2xl font-bold text-gray-900"></h3>
+                    <button id="modal-close-button" class="text-gray-500 hover:text-gray-700 transition-colors duration-200 focus:outline-none" aria-label="Close">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Modal Content -->
+                <div class="p-6">
+                    <div class="mb-6 flex flex-col sm:flex-row items-center sm:space-x-6">
+                        <div class="w-full sm:w-1/2 flex-shrink-0 mb-4 sm:mb-0">
+                            <img id="modal-laptop-image" src="" alt="Laptop Image" class="w-full h-auto rounded-lg object-cover shadow-md" />
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <p id="modal-laptop-description" class="text-gray-700 text-base mb-4"></p>
+                            <div id="modal-laptop-details" class="grid grid-cols-1 gap-3 text-sm">
+                                <!-- Details will be injected here by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Ports & Connectivity:</h4>
+                        <p id="modal-laptop-ports" class="text-gray-700 text-base"></p>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="p-6 border-t border-gray-200 flex justify-end gap-3">
+                    <button class="bg-green-600 text-white py-2 px-6 rounded-lg font-medium hover:bg-green-700 transition duration-200 shadow-md">
+                        Buy Now
+                    </button>
+                    <button class="bg-indigo-600 text-white py-2 px-6 rounded-lg font-medium hover:bg-indigo-700 transition duration-200 shadow-md">
+                        Add to Cart
+                    </button>
+                    <button id="modal-close-button-footer" class="bg-gray-300 text-gray-800 py-2 px-6 rounded-lg font-medium hover:bg-gray-400 transition duration-200 shadow-md">
+                        Close
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+<section  class="productdetails" id="product">
+    <script>
+        // Sample laptop data - Updated with 10 dummy cards per brand
+        const laptops = [
+            // --- HP Laptops (10 total) ---
+            {
+                id: 1,
+                brand: 'HP',
+                name: 'HP Spectre x360 14',
+                processor: 'Intel Core Ultra 7 155H',
+                ram: '16GB LPDDR5X',
+                storage: '1TB PCIe Gen4 NVMe SSD',
+                display: '14" 2.8K OLED (2880 x 1800) Touch, 120Hz',
+                gpu: 'Intel Arc Graphics',
+                price: '$1649',
+                image: 'https://placehold.co/400x300/ffe0f0/000000?text=HP+Spectre',
+                description: 'A versatile 2-in-1 convertible laptop with a stunning OLED display and premium design, perfect for productivity and entertainment.',
+                battery: '68 Whr',
+                ports: '2x Thunderbolt 4, 1x USB-A 3.2 Gen 2, Headphone/Microphone Combo',
+                os: 'Windows 11 Home',
+                weight: '1.44 kg'
+            },
+            {
+                id: 4,
+                brand: 'HP',
+                name: 'HP Envy 16',
+                processor: 'Intel Core i9-13900H',
+                ram: '32GB DDR5',
+                storage: '1TB NVMe SSD',
+                display: '16.0" QHD+ (2560 x 1600) IPS Touch',
+                gpu: 'NVIDIA GeForce RTX 4060',
+                price: '$1799',
+                image: 'https://placehold.co/400x300/f0e0ff/000000?text=HP+Envy',
+                description: 'A premium laptop for creative work with a vibrant display and dedicated graphics, offering excellent performance and design.',
+                battery: '83 Whr',
+                ports: '2x Thunderbolt 4, 2x USB-A 3.2 Gen 1, HDMI 2.1, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '2.35 kg'
+            },
+            {
+                id: 7,
+                brand: 'HP',
+                name: 'HP Pavilion 15',
+                processor: 'AMD Ryzen 5 7530U',
+                ram: '8GB DDR4',
+                storage: '256GB NVMe SSD',
+                display: '15.6" FHD (1920 x 1080) IPS',
+                gpu: 'AMD Radeon Graphics',
+                price: '$649',
+                image: 'https://placehold.co/400x300/e6f2ff/000000?text=HP+Pavilion',
+                description: 'A reliable everyday laptop offering a balance of performance and features for home and office tasks.',
+                battery: '41 Whr',
+                ports: '1x USB-C 3.2 Gen 1, 2x USB-A 3.2 Gen 1, HDMI 2.1, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '1.74 kg'
+            },
+            {
+                id: 10,
+                brand: 'HP',
+                name: 'HP Omen 17',
+                processor: 'Intel Core i7-14700HX',
+                ram: '16GB DDR5',
+                storage: '1TB NVMe SSD',
+                display: '17.3" QHD (2560 x 1440) 165Hz',
+                gpu: 'NVIDIA GeForce RTX 4070',
+                price: '$1999',
+                image: 'https://placehold.co/400x300/ffe6e6/000000?text=HP+Omen',
+                description: 'A large-screen gaming powerhouse delivering immersive experiences with high refresh rate display and powerful components.',
+                battery: '83 Whr',
+                ports: '1x Thunderbolt 4, 3x USB-A 3.2 Gen 1, HDMI 2.1, Mini DisplayPort, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '2.78 kg'
+            },
+            {
+                id: 13,
+                brand: 'HP',
+                name: 'HP Dragonfly G4',
+                processor: 'Intel Core i7-1365U',
+                ram: '16GB LPDDR5',
+                storage: '512GB NVMe SSD',
+                display: '13.5" WUXGA+ (1920 x 1280) IPS Touch',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$2199',
+                image: 'https://placehold.co/400x300/e6fff2/000000?text=HP+Dragonfly',
+                description: 'An ultra-premium business convertible, combining exquisite design with cutting-edge security and collaboration features.',
+                battery: '68 Whr',
+                ports: '2x Thunderbolt 4, 1x USB-A 3.2 Gen 1, HDMI 2.1, Nano SIM (optional), Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '0.99 kg'
+            },
+            {
+                id: 17,
+                brand: 'HP',
+                name: 'HP EliteBook 840 G10',
+                processor: 'Intel Core i7-1355U',
+                ram: '16GB DDR5',
+                storage: '512GB NVMe SSD',
+                display: '14" FHD (1920 x 1080) Anti-Glare',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$1499',
+                image: 'https://placehold.co/400x300/d0e0ff/000000?text=HP+EliteBook',
+                description: 'A robust and secure business laptop with powerful performance and collaboration features.',
+                battery: '53 Whr',
+                ports: '2x Thunderbolt 4, 2x USB-A 3.2 Gen 1, HDMI 2.1, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '1.36 kg'
+            },
+            {
+                id: 18,
+                brand: 'HP',
+                name: 'HP ZBook Studio G10',
+                processor: 'Intel Core i9-13900H',
+                ram: '32GB DDR5',
+                storage: '1TB NVMe SSD',
+                display: '16" QHD+ (2560 x 1600) IPS DreamColor',
+                gpu: 'NVIDIA RTX 4000 Ada Generation',
+                price: '$2899',
+                image: 'https://placehold.co/400x300/c0d0ff/000000?text=HP+ZBook',
+                description: 'A mobile workstation designed for professional creatives and engineers, offering extreme performance and a stunning display.',
+                battery: '86 Whr',
+                ports: '2x Thunderbolt 4, 1x USB-A 3.2 Gen 1, Mini DisplayPort 1.4, HDMI 2.1, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '1.73 kg'
+            },
+            {
+                id: 19,
+                brand: 'HP',
+                name: 'HP Victus 15',
+                processor: 'AMD Ryzen 7 7735HS',
+                ram: '16GB DDR5',
+                storage: '512GB NVMe SSD',
+                display: '15.6" FHD (1920x1080) 144Hz',
+                gpu: 'NVIDIA GeForce RTX 3050',
+                price: '$899',
+                image: 'https://placehold.co/400x300/a0b0ff/000000?text=HP+Victus',
+                description: 'A budget-friendly gaming laptop that delivers solid performance for modern games and everyday tasks.',
+                battery: '70 Whr',
+                ports: '1x USB-C 3.2 Gen 1, 2x USB-A 3.2 Gen 1, HDMI 2.1, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '2.29 kg'
+            },
+            {
+                id: 20,
+                brand: 'HP',
+                name: 'HP Chromebook x360 14c',
+                processor: 'Intel Core i3-1115G4',
+                ram: '8GB LPDDR4X',
+                storage: '128GB eMMC',
+                display: '14" FHD (1920 x 1080) Touch',
+                gpu: 'Intel UHD Graphics',
+                price: '$599',
+                image: 'https://placehold.co/400x300/8090ff/000000?text=HP+Chromebook',
+                description: 'A versatile 2-in-1 Chromebook perfect for web browsing, productivity, and entertainment with long battery life.',
+                battery: '58 Whr',
+                ports: '2x USB-C 3.2 Gen 1, 1x USB-A 3.2 Gen 1, MicroSD Card Reader, Headphone/Mic Combo',
+                os: 'ChromeOS',
+                weight: '1.65 kg'
+            },
+            {
+                id: 21,
+                brand: 'HP',
+                name: 'HP ProBook 450 G10',
+                processor: 'Intel Core i5-1335U',
+                ram: '8GB DDR4',
+                storage: '256GB NVMe SSD',
+                display: '15.6" FHD (1920 x 1080) Anti-Glare',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$949',
+                image: 'https://placehold.co/400x300/6070ff/000000?text=HP+ProBook',
+                description: 'A practical and reliable business laptop offering essential features and security for everyday tasks.',
+                battery: '42 Whr',
+                ports: '1x USB-C 3.2 Gen 2, 3x USB-A 3.2 Gen 1, HDMI 2.1, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '1.79 kg'
+            },
 
+            // --- Dell Laptops (10 total) ---
+            {
+                id: 2,
+                brand: 'Dell',
+                name: 'Dell XPS 15',
+                processor: 'Intel Core i7-13700H',
+                ram: '16GB DDR5',
+                storage: '512GB NVMe SSD',
+                display: '15.6" FHD+ (1920x1200) InfinityEdge Non-Touch Anti-Glare',
+                gpu: 'NVIDIA GeForce RTX 4050',
+                price: '$1899',
+                image: 'https://placehold.co/400x300/e0f2f7/000000?text=Dell+XPS+15',
+                description: 'A powerful and sleek laptop designed for creators and professionals, featuring a stunning display and robust performance.',
+                battery: '86 Whr',
+                ports: '2x Thunderbolt 4, 1x USB-C 3.2 Gen 2, SD Card Reader, Headphone Jack',
+                os: 'Windows 11 Home',
+                weight: '1.92 kg'
+            },
+            {
+                id: 5,
+                brand: 'Dell',
+                name: 'Dell Inspiron 16',
+                processor: 'AMD Ryzen 7 7730U',
+                ram: '16GB DDR4',
+                storage: '512GB NVMe SSD',
+                display: '16.0" FHD+ (1920x1200) Anti-Glare',
+                gpu: 'AMD Radeon Graphics',
+                price: '$799',
+                image: 'https://placehold.co/400x300/e0ffec/000000?text=Dell+Inspiron',
+                description: 'An affordable and reliable everyday laptop with a large display, suitable for general use and productivity.',
+                battery: '54 Whr',
+                ports: '2x USB 3.2 Gen 1, 1x USB-C 3.2 Gen 1, HDMI 1.4, SD Card Reader, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '1.87 kg'
+            },
+            {
+                id: 8,
+                brand: 'Dell',
+                name: 'Dell Latitude 7440',
+                processor: 'Intel Core i5-1335U',
+                ram: '8GB LPDDR5',
+                storage: '256GB NVMe SSD',
+                display: '14" FHD+ (1920x1200) Anti-Glare',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$1399',
+                image: 'https://placehold.co/400x300/ffe6f2/000000?text=Dell+Latitude',
+                description: 'A business-class laptop designed for security and productivity, offering robust build quality and essential features.',
+                battery: '57 Whr',
+                ports: '2x Thunderbolt 4, 1x USB-A 3.2 Gen 1, HDMI 2.0, Smart Card Reader (optional), Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '1.27 kg'
+            },
+            {
+                id: 11,
+                brand: 'Dell',
+                name: 'Dell G15 Gaming',
+                processor: 'AMD Ryzen 7 7840HS',
+                ram: '16GB DDR5',
+                storage: '512GB NVMe SSD',
+                display: '15.6" FHD (1920x1080) 120Hz',
+                gpu: 'NVIDIA GeForce RTX 4060',
+                price: '$1299',
+                image: 'https://placehold.co/400x300/e6ffee/000000?text=Dell+G15',
+                description: 'An entry-level gaming laptop providing solid performance for popular titles without breaking the bank.',
+                battery: '86 Whr',
+                ports: '3x USB-A 3.2 Gen 1, 1x USB-C 3.2 Gen 2 (DisplayPort), HDMI 2.1, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '2.81 kg'
+            },
+            {
+                id: 14,
+                brand: 'Dell',
+                name: 'Dell Alienware m18',
+                processor: 'Intel Core i9-13900HX',
+                ram: '32GB DDR5',
+                storage: '1TB RAID 0 NVMe SSD',
+                display: '18" QHD+ (2560x1600) 165Hz',
+                gpu: 'NVIDIA GeForce RTX 4090',
+                price: '$3599',
+                image: 'https://placehold.co/400x300/ffe6ff/000000?text=Alienware+m18',
+                description: 'The ultimate gaming desktop replacement, offering extreme performance and a massive display for an unparalleled gaming experience.',
+                battery: '97 Whr',
+                ports: '2x Thunderbolt 4, 2x USB-A 3.2 Gen 1, 1x USB-A 3.2 Gen 2, HDMI 2.1, Mini DisplayPort, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '4.57 kg'
+            },
+            {
+                id: 16,
+                brand: 'Dell',
+                name: 'Dell XPS 13',
+                processor: 'Intel Core i5-1340P',
+                ram: '8GB LPDDR5',
+                storage: '256GB NVMe SSD',
+                display: '13.4" FHD+ (1920 x 1200) InfinityEdge Non-Touch',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$999',
+                image: 'https://placehold.co/400x300/e0ebff/000000?text=Dell+XPS+13',
+                description: 'A compact and beautifully designed ultrabook, perfect for on-the-go productivity with long battery life.',
+                battery: '51 Whr',
+                ports: '2x Thunderbolt 4 (USB-C), Headphone Jack (via adapter)',
+                os: 'Windows 11 Home',
+                weight: '1.17 kg'
+            },
+            {
+                id: 22,
+                brand: 'Dell',
+                name: 'Dell Inspiron 14',
+                processor: 'Intel Core i5-1335U',
+                ram: '8GB DDR4',
+                storage: '256GB NVMe SSD',
+                display: '14.0" FHD (1920x1080) Anti-Glare',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$699',
+                image: 'https://placehold.co/400x300/cbe8ff/000000?text=Dell+Inspiron+14',
+                description: 'A compact and reliable laptop for everyday tasks and casual use, offering good portability.',
+                battery: '41 Whr',
+                ports: '2x USB 3.2 Gen 1, 1x USB-C 3.2 Gen 1, HDMI 1.4, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '1.54 kg'
+            },
+            {
+                id: 23,
+                brand: 'Dell',
+                name: 'Dell Precision 7770',
+                processor: 'Intel Core i9-12900HX',
+                ram: '64GB DDR5',
+                storage: '2TB NVMe SSD',
+                display: '17.3" UHD (3840x2160) Anti-Glare',
+                gpu: 'NVIDIA RTX A5500',
+                price: '$4599',
+                image: 'https://placehold.co/400x300/a2d2ff/000000?text=Dell+Precision',
+                description: 'A high-end mobile workstation for demanding professional applications, offering extreme power and expandability.',
+                battery: '93 Whr',
+                ports: '2x Thunderbolt 4, 1x USB-C 3.2 Gen 2, 2x USB-A 3.2 Gen 1, HDMI 2.1, Mini DisplayPort, Ethernet, SD Card Reader, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '3.08 kg'
+            },
+            {
+                id: 24,
+                brand: 'Dell',
+                name: 'Dell Vostro 3520',
+                processor: 'Intel Core i3-1215U',
+                ram: '8GB DDR4',
+                storage: '256GB NVMe SSD',
+                display: '15.6" FHD (1920x1080) Anti-Glare',
+                gpu: 'Intel UHD Graphics',
+                price: '$549',
+                image: 'https://placehold.co/400x300/7aa7ff/000000?text=Dell+Vostro',
+                description: 'An essential laptop for small business needs, offering reliable performance and necessary features for daily productivity.',
+                battery: '41 Whr',
+                ports: '1x USB 3.2 Gen 1, 1x USB 2.0, 1x USB-C 3.2 Gen 1, HDMI 1.4, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '1.90 kg'
+            },
+            {
+                id: 25,
+                brand: 'Dell',
+                name: 'Dell Chromebook 11',
+                processor: 'Intel Celeron N4020',
+                ram: '4GB LPDDR4',
+                storage: '32GB eMMC',
+                display: '11.6" HD (1366x768) Anti-Glare',
+                gpu: 'Intel UHD Graphics',
+                price: '$299',
+                image: 'https://placehold.co/400x300/4d80ff/000000?text=Dell+Chromebook',
+                description: 'An affordable and durable Chromebook ideal for education and basic web-based tasks, built for portability.',
+                battery: '42 Whr',
+                ports: '2x USB-C 3.1 Gen 1, 2x USB-A 3.1 Gen 1, MicroSD Card Reader, Headphone/Mic Combo',
+                os: 'ChromeOS',
+                weight: '1.26 kg'
+            },
+
+            // --- Lenovo Laptops (10 total) ---
+            {
+                id: 3,
+                brand: 'Lenovo',
+                name: 'Lenovo Legion Pro 7i',
+                processor: 'Intel Core i9-14900HX',
+                ram: '32GB DDR5',
+                storage: '1TB Gen4 NVMe SSD',
+                display: '16" WQXGA (2560x1600) IPS 240Hz',
+                gpu: 'NVIDIA GeForce RTX 4080',
+                price: '$2699',
+                image: 'https://placehold.co/400x300/e6ffe0/000000?text=Lenovo+Legion',
+                description: 'A high-performance gaming laptop built for competitive gaming and demanding tasks, featuring top-tier components and cooling.',
+                battery: '99.99 Whr',
+                ports: '1x Thunderbolt 4, 3x USB-A 3.2 Gen 1, 1x USB-A 3.2 Gen 2, HDMI 2.1, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '2.8 kg'
+            },
+            {
+                id: 6,
+                brand: 'Lenovo',
+                name: 'Lenovo Yoga 7i 16',
+                processor: 'Intel Core i7-1355U',
+                ram: '16GB LPDDR5',
+                storage: '512GB NVMe SSD',
+                display: '16.0" FHD+ (1920x1200) IPS Touch',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$949',
+                image: 'https://placehold.co/400x300/fff4e6/000000?text=Lenovo+Yoga',
+                description: 'A versatile 2-in-1 laptop with a large touchscreen, ideal for casual use, drawing, and presentations.',
+                battery: '71 Whr',
+                ports: '2x Thunderbolt 4, 1x USB-A 3.2 Gen 1, HDMI 1.4b, SD Card Reader, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '2.04 kg'
+            },
+            {
+                id: 9,
+                brand: 'Lenovo',
+                name: 'Lenovo ThinkPad X1 Carbon Gen 11',
+                processor: 'Intel Core i7-1365U',
+                ram: '16GB LPDDR5X',
+                storage: '1TB NVMe SSD',
+                display: '14" WUXGA (1920x1200) IPS Anti-Glare',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$1999',
+                image: 'https://placehold.co/400x300/e6f7ff/000000?text=ThinkPad+X1',
+                description: 'The ultimate business laptop, known for its legendary durability, lightweight design, and exceptional keyboard.',
+                battery: '57 Whr',
+                ports: '2x Thunderbolt 4, 2x USB-A 3.2 Gen 1, HDMI 2.1, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '1.12 kg'
+            },
+            {
+                id: 12,
+                brand: 'Lenovo',
+                name: 'Lenovo IdeaPad Slim 5i',
+                processor: 'Intel Core i5-13500H',
+                ram: '16GB LPDDR5',
+                storage: '512GB NVMe SSD',
+                display: '16.0" WUXGA (1920x1200) IPS',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$849',
+                image: 'https://placehold.co/400x300/fff7e6/000000?text=IdeaPad+Slim',
+                description: 'A thin and light everyday laptop for students and professionals, offering a large display and reliable performance.',
+                battery: '56.5 Whr',
+                ports: '2x USB-C 3.2 Gen 1 (DisplayPort/Power Delivery), 2x USB-A 3.2 Gen 1, HDMI 1.4b, SD Card Reader, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '1.89 kg'
+            },
+            {
+                id: 15,
+                brand: 'Lenovo',
+                name: 'Lenovo ThinkBook 14 G6',
+                processor: 'AMD Ryzen 5 7530U',
+                ram: '8GB DDR4',
+                storage: '256GB NVMe SSD',
+                display: '14" FHD (1920 x 1080) Anti-Glare',
+                gpu: 'AMD Radeon Graphics',
+                price: '$749',
+                image: 'https://placehold.co/400x300/e6ffeb/000000?text=ThinkBook+14',
+                description: 'A solid business laptop offering a blend of performance and features for small to medium-sized businesses.',
+                battery: '45 Whr',
+                ports: '1x USB-C 3.2 Gen 2, 1x USB-C 3.2 Gen 1, 2x USB-A 3.2 Gen 1, HDMI 2.1, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '1.4 kg'
+            },
+            {
+                id: 26,
+                brand: 'Lenovo',
+                name: 'Lenovo Flex 5 14',
+                processor: 'AMD Ryzen 5 5500U',
+                ram: '8GB DDR4',
+                storage: '256GB NVMe SSD',
+                display: '14.0" FHD (1920x1080) Touch',
+                gpu: 'AMD Radeon Graphics',
+                price: '$629',
+                image: 'https://placehold.co/400x300/b0e0d0/000000?text=Lenovo+Flex',
+                description: 'A versatile 2-in-1 convertible laptop perfect for students and everyday tasks, offering a comfortable typing experience.',
+                battery: '52.5 Whr',
+                ports: '1x USB-C 3.2 Gen 1, 2x USB-A 3.2 Gen 1, HDMI 1.4b, SD Card Reader, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '1.50 kg'
+            },
+            {
+                id: 27,
+                brand: 'Lenovo',
+                name: 'Lenovo ThinkPad E15 Gen 5',
+                processor: 'Intel Core i5-1335U',
+                ram: '16GB DDR4',
+                storage: '512GB NVMe SSD',
+                display: '15.6" FHD (1920x1080) Anti-Glare',
+                gpu: 'Intel Iris Xe Graphics',
+                price: '$899',
+                image: 'https://placehold.co/400x300/8cbfd0/000000?text=ThinkPad+E15',
+                description: 'A reliable and affordable business laptop with ThinkPad durability and essential features for daily work.',
+                battery: '57 Whr',
+                ports: '1x Thunderbolt 4, 1x USB-A 3.2 Gen 1, 1x USB-A 2.0, HDMI 1.4b, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Pro',
+                weight: '1.70 kg'
+            },
+            {
+                id: 28,
+                brand: 'Lenovo',
+                name: 'Lenovo Legion Slim 7i',
+                processor: 'Intel Core i7-13700H',
+                ram: '16GB DDR5',
+                storage: '1TB NVMe SSD',
+                display: '16" WQXGA (2560x1600) IPS 240Hz',
+                gpu: 'NVIDIA GeForce RTX 4060',
+                price: '$1799',
+                image: 'https://placehold.co/400x300/66a6b8/000000?text=Legion+Slim',
+                description: 'A sleek and powerful gaming laptop, designed for gamers who need high performance in a thin and light chassis.',
+                battery: '99.99 Whr',
+                ports: '2x Thunderbolt 4, 2x USB-A 3.2 Gen 1, HDMI 2.1, SD Card Reader, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '2.00 kg'
+            },
+            {
+                id: 29,
+                brand: 'Lenovo',
+                name: 'Lenovo IdeaPad Gaming 3',
+                processor: 'AMD Ryzen 5 7535HS',
+                ram: '8GB DDR5',
+                storage: '512GB NVMe SSD',
+                display: '15.6" FHD (1920x1080) 120Hz',
+                gpu: 'NVIDIA GeForce RTX 3050',
+                price: '$899',
+                image: 'https://placehold.co/400x300/408c9c/000000?text=IdeaPad+Gaming',
+                description: 'An entry-level gaming laptop offering solid performance for popular titles at an accessible price point.',
+                battery: '60 Whr',
+                ports: '1x USB-C 3.2 Gen 2, 2x USB-A 3.2 Gen 1, HDMI 2.0, Ethernet, Headphone/Mic Combo',
+                os: 'Windows 11 Home',
+                weight: '2.32 kg'
+            },
+            {
+                id: 30,
+                brand: 'Lenovo',
+                name: 'Lenovo Chromebook Duet 5',
+                processor: 'Qualcomm Snapdragon 7c Gen 2',
+                ram: '8GB LPDDR4X',
+                storage: '128GB eMMC',
+                display: '13.3" FHD OLED (1920x1080) Detachable',
+                gpu: 'Adreno 618 Graphics',
+                price: '$499',
+                image: 'https://placehold.co/400x300/206070/000000?text=Chromebook+Duet',
+                description: 'A versatile 2-in-1 Chromebook with a vibrant OLED display and a detachable keyboard, perfect for portability and media consumption.',
+                battery: '42 Whr',
+                ports: '2x USB-C 3.2 Gen 1, Pogo Pin connectors for keyboard',
+                os: 'ChromeOS',
+                weight: '0.70 kg (tablet only)'
+            }
+        ];
+
+        
+        let laptopCardsGrid;
+        let laptopDetailModal;
+        let modalLaptopNameHeader;
+        let modalLaptopImage;
+        let modalLaptopDescription;
+        let modalLaptopDetails;
+        let modalLaptopPorts;
+        let modalCloseButton;
+        let modalCloseButtonFooter;
+        let brandFilterButtons;
+
+        
+        function createLaptopCard(laptop) {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer overflow-hidden';
+            card.setAttribute('data-id', laptop.id);
+            
+            const getPlaceholderImage = (name, width, height, bgColor = 'e0e0e0', textColor = '555555') => {
+                const text = name.split(' ').slice(0, 2).join('+');
+                return `https://placehold.co/${width}x${height}/${bgColor}/${textColor}?text=${text}`;
+            };
+
+            card.innerHTML = `
+                <div class="w-full h-48 bg-gray-200 flex items-center justify-center overflow-hidden rounded-t-xl">
+                    <img
+                        src="${laptop.image}"
+                        alt="${laptop.name}"
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null;this.src='${getPlaceholderImage(laptop.name, 400, 300)}';"
+                    />
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2 truncate">
+                        ${laptop.name}
+                    </h2>
+                    <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                        ${laptop.description}
+                    </p>
+                    <div class="flex items-center justify-between text-gray-700 mb-4">
+                        <span class="text-lg font-bold">${laptop.price}</span>
+                        <span class="text-sm bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">
+                            ${laptop.brand}
+                        </span>
+                    </div>
+                    <div class="flex gap-3">
+                        <button class="flex-1 bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition duration-200 text-sm buy-now-btn">
+                            Buy Now
+                        </button>
+                        <button class="flex-1 bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition duration-200 text-sm add-to-cart-btn">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            `;
+
+           
+            card.addEventListener('click', (event) => {
+                
+                if (!event.target.classList.contains('buy-now-btn') && !event.target.classList.contains('add-to-cart-btn')) {
+                    showLaptopDetails(laptop.id);
+                }
+            });
+
+           
+            const buyNowBtn = card.querySelector('.buy-now-btn');
+            buyNowBtn.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                alert(`Buying ${laptop.name} now! (This is a placeholder action)`);
+              
+            });
+
+            const addToCartBtn = card.querySelector('.add-to-cart-btn');
+            addToCartBtn.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                alert(`${laptop.name} added to cart! (This is a placeholder action)`);
+
+            });
+
+            return card;
+        }
+
+       
+        function showLaptopDetails(laptopId) {
+            const laptop = laptops.find(l => l.id === laptopId);
+            if (!laptop) return;
+
+            modalLaptopNameHeader.textContent = `${laptop.name} Details`;
+            modalLaptopImage.src = laptop.image;
+            modalLaptopImage.alt = laptop.name;
+
+            
+            modalLaptopImage.onerror = () => {
+                const text = laptop.name.split(' ').slice(0, 2).join('+');
+                modalLaptopImage.src = `https://placehold.co/600x400/e0e0e0/555555?text=${text}`;
+                modalLaptopImage.onerror = null; 
+            };
+
+            modalLaptopDescription.textContent = laptop.description;
+            modalLaptopPorts.textContent = laptop.ports;
+
+            
+            modalLaptopDetails.innerHTML = '';
+
+            
+            const details = [
+                { label: 'Processor', value: laptop.processor },
+                { label: 'RAM', value: laptop.ram },
+                { label: 'Storage', value: laptop.storage },
+                { label: 'Display', value: laptop.display },
+                { label: 'GPU', value: laptop.gpu },
+                { label: 'Operating System', value: laptop.os },
+                { label: 'Battery', value: laptop.battery },
+                { label: 'Weight', value: laptop.weight },
+                { label: 'Price', value: laptop.price, isPrice: true }
+            ];
+
+            details.forEach(detail => {
+                const detailItem = document.createElement('div');
+                detailItem.className = 'flex justify-between items-start py-1 border-b border-gray-100 last:border-b-0';
+                detailItem.innerHTML = `
+                    <span class="font-medium text-gray-600">${detail.label}:</span>
+                    <span class="text-gray-800 ${detail.isPrice ? 'font-bold text-indigo-700' : ''}">${detail.value}</span>
+                `;
+                modalLaptopDetails.appendChild(detailItem);
+            });
+
+            laptopDetailModal.classList.remove('hidden');
+            
+            laptopDetailModal.classList.remove('opacity-0', 'scale-95');
+            laptopDetailModal.classList.add('opacity-100', 'scale-100');
+        }
+
+       
+        function hideLaptopDetails() {
+          
+            laptopDetailModal.classList.remove('opacity-100', 'scale-100');
+            laptopDetailModal.classList.add('opacity-0', 'scale-95');
+           
+            setTimeout(() => {
+                laptopDetailModal.classList.add('hidden');
+            }, 300); 
+        }
+
+        
+        function displayLaptops(brand) {
+           
+            laptopCardsGrid.innerHTML = '';
+            
+         
+            const filteredLaptops = (brand === 'All')
+                ? laptops
+                : laptops.filter(laptop => laptop.brand === brand);
+
+           
+            if (filteredLaptops.length > 0) {
+                filteredLaptops.forEach(laptop => {
+                    const card = createLaptopCard(laptop);
+                    laptopCardsGrid.appendChild(card);
+                });
+            } else {
+                
+                laptopCardsGrid.innerHTML = `<p class="col-span-full text-center text-lg text-gray-600">Is brand ke liye koi laptop nahi mila.</p>`;
+            }
+
+            
+            brandFilterButtons.forEach(button => {
+                if (button.dataset.brand === brand) {
+                    button.classList.remove('bg-white', 'text-indigo-700', 'border-indigo-600');
+                    button.classList.add('bg-indigo-600', 'text-white');
+                } else {
+                    button.classList.remove('bg-indigo-600', 'text-white');
+                    button.classList.add('bg-white', 'text-indigo-700', 'border-indigo-600');
+                }
+            });
+        }
+
+      
+        window.onload = function() {
+            laptopCardsGrid = document.getElementById('laptop-cards-grid');
+            laptopDetailModal = document.getElementById('laptop-detail-modal');
+            modalLaptopNameHeader = document.getElementById('modal-laptop-name-header');
+            modalLaptopImage = document.getElementById('modal-laptop-image');
+            modalLaptopDescription = document.getElementById('modal-laptop-description');
+            modalLaptopDetails = document.getElementById('modal-laptop-details');
+            modalLaptopPorts = document.getElementById('modal-laptop-ports');
+            modalCloseButton = document.getElementById('modal-close-button');
+            modalCloseButtonFooter = document.getElementById('modal-close-button-footer');
+            brandFilterButtons = document.querySelectorAll('.brand-filter-btn');
+
+           
+            modalCloseButton.addEventListener('click', hideLaptopDetails);
+            modalCloseButtonFooter.addEventListener('click', hideLaptopDetails);
+
+           
+            brandFilterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    displayLaptops(button.dataset.brand);
+                });
+            });
+
+          
+            displayLaptops('All');
+        };
+    </script>
+</body>
+</html>
+</section>
 
 <!-- cards -->
 
-<section class="brand-section">
-    <h2>Lenovo Laptops</h2>
-    <div class="marquee-wrapper">
-      <div class="marquee">
-        <!-- 10 HP Cards (duplicated for infinite scroll) -->
-        <div class="card-track">
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP EliteBook 840</h3><p>₹29,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ProBook 440</h3><p>₹28,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Spectre x360</h3><p>₹42,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Pavilion 15</h3><p>₹33,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Envy 13</h3><p>₹39,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ZBook</h3><p>₹45,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Chromebook</h3><p>₹24,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Omen</h3><p>₹48,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Stream</h3><p>₹19,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Elite x2</h3><p>₹36,499</p></div>
-
-          <!-- Duplicate cards for infinite effect -->
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP EliteBook 840</h3><p>₹29,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ProBook 440</h3><p>₹28,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Spectre x360</h3><p>₹42,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Pavilion 15</h3><p>₹33,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Envy 13</h3><p>₹39,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ZBook</h3><p>₹45,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Chromebook</h3><p>₹24,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Omen</h3><p>₹48,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Stream</h3><p>₹19,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Elite x2</h3><p>₹36,499</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
 
   
-<section class="brand-section">
-    <h2>Dell Laptops</h2>
-    <div class="marquee-wrapper">
-      <div class="marquee">
-        <!-- 10 HP Cards (duplicated for infinite scroll) -->
-        <div class="card-track">
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP EliteBook 840</h3><p>₹29,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ProBook 440</h3><p>₹28,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Spectre x360</h3><p>₹42,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Pavilion 15</h3><p>₹33,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Envy 13</h3><p>₹39,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ZBook</h3><p>₹45,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Chromebook</h3><p>₹24,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Omen</h3><p>₹48,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Stream</h3><p>₹19,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Elite x2</h3><p>₹36,499</p></div>
-
-          <!-- Duplicate cards for infinite effect -->
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP EliteBook 840</h3><p>₹29,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ProBook 440</h3><p>₹28,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Spectre x360</h3><p>₹42,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Pavilion 15</h3><p>₹33,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Envy 13</h3><p>₹39,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ZBook</h3><p>₹45,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Chromebook</h3><p>₹24,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Omen</h3><p>₹48,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Stream</h3><p>₹19,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Elite x2</h3><p>₹36,499</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  
-<section class="brand-section">
-    <h2>HP Laptops</h2>
-    <div class="marquee-wrapper">
-      <div class="marquee">
-        <!-- 10 HP Cards (duplicated for infinite scroll) -->
-        <div class="card-track">
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP EliteBook 840</h3><p>₹29,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ProBook 440</h3><p>₹28,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Spectre x360</h3><p>₹42,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Pavilion 15</h3><p>₹33,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Envy 13</h3><p>₹39,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ZBook</h3><p>₹45,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Chromebook</h3><p>₹24,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Omen</h3><p>₹48,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Stream</h3><p>₹19,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Elite x2</h3><p>₹36,499</p></div>
-
-          <!-- Duplicate cards for infinite effect -->
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP EliteBook 840</h3><p>₹29,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ProBook 440</h3><p>₹28,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Spectre x360</h3><p>₹42,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Pavilion 15</h3><p>₹33,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Envy 13</h3><p>₹39,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP ZBook</h3><p>₹45,499</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Chromebook</h3><p>₹24,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Omen</h3><p>₹48,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Stream</h3><p>₹19,999</p></div>
-          <div class="laptop-card"><img src="assests/1.jpg"><h3>HP Elite x2</h3><p>₹36,499</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <img src="assets/1.jpg" alt="Laptop Image" id="modalImage">
-      <h3 id="modalTitle"></h3>
-      <p id="modalPrice"></p>
-      <div class="close-btn" onclick="closeModal()">Close</div>
-    </div>
-  </div>
-
 
  
 
@@ -239,6 +1117,134 @@
       
 
 
+    <title>Contact Us Section</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS to apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Contact Us Section Container -->
+    <section class="w-full max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4 rounded-lg">
+                Contact Us
+            </h2>
+            <p class="text-lg text-gray-600">
+                Connect with our team. Our experts are here to help you.
+            </p>
+        </div>
+
+        <!-- Cards Grid Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Person Card 1 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col items-center">
+                        <!-- Photo -->
+                        <img src="https://placehold.co/120x120/A78BFA/FFFFFF/png?text=Rahul" alt="Rahul Sharma"
+                             class="w-32 h-32 rounded-full object-cover border-4 border-indigo-400 mb-4 shadow-md">
+                        <!-- Name -->
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Rahul Sharma</h3>
+                        <!-- Role/Other Info -->
+                        <p class="text-indigo-600 text-md font-medium mb-4">Lead Engineer</p>
+                        <!-- Contact Details -->
+                        <div class="text-gray-700 text-center space-y-2">
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                +91 98765 43210
+                            </p>
+                            <!-- Email -->
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                rahul.sharma@example.com
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">Mon-Fri, 9 AM - 5 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Person Card 2 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col items-center">
+                        <!-- Photo -->
+                        <img src="https://placehold.co/120x120/60A5FA/FFFFFF/png?text=Priya" alt="Priya Singh"
+                             class="w-32 h-32 rounded-full object-cover border-4 border-blue-400 mb-4 shadow-md">
+                        <!-- Name -->
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Priya Singh</h3>
+                        <!-- Role/Other Info -->
+                        <p class="text-blue-600 text-md font-medium mb-4">Customer Service Manager</p>
+                        <!-- Contact Details -->
+                        <div class="text-gray-700 text-center space-y-2">
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                +91 87654 32109
+                            </p>
+                            <!-- Email -->
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                priya.singh@example.com
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">Mon-Sat, 10 AM - 6 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Person Card 3 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex flex-col items-center">
+                        <!-- Photo -->
+                        <img src="https://placehold.co/120x120/4ADE80/FFFFFF/png?text=Amit" alt="Amit Kumar"
+                             class="w-32 h-32 rounded-full object-cover border-4 border-emerald-400 mb-4 shadow-md">
+                        <!-- Name -->
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Amit Kumar</h3>
+                        <!-- Role/Other Info -->
+                        <p class="text-emerald-600 text-md font-medium mb-4">Sales Head</p>
+                        <!-- Contact Details -->
+                        <div class="text-gray-700 text-center space-y-2">
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                +91 76543 21098
+                            </p>
+                            <!-- Email -->
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                amit.kumar@example.com
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">Mon-Fri, 9 AM - 6 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
 <!-- About Us -->
 <section class="about" id="about">
     <div class="about-container">
@@ -270,5 +1276,6 @@
 
 
     <script src="script.js"></script>
+    <script src="c.js"></script>
 </body>
 </html>
